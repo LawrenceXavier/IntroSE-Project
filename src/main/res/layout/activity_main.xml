@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context="com.example.lawrence.nmcnpm.MainActivity">
+
+    <ImageView
+        android:id="@+id/Main_imgStartLogo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/logo"
+        android:layout_marginBottom="120pt"
+        android:contentDescription="@string/logoContentDescription"
+        />
+
+    <Button
+        android:id="@+id/Main_btLoginFb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/loginWithFacebook"
+        android:layout_marginTop="150pt"
+        android:layout_marginLeft="10pt"
+        android:layout_marginRight="10pt"
+        android:height="40pt"
+        android:background="#3b5998"
+        />
+
+    <Button
+        android:id="@+id/Main_btLoginPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/loginWithPhoneNumber"
+        android:layout_marginTop="200pt"
+        android:layout_marginLeft="10pt"
+        android:layout_marginRight="10pt"
+        android:height="40pt"
+        />
+</android.widget.RelativeLayout>

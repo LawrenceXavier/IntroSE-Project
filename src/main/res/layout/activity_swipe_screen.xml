@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context="com.example.lawrence.nmcnpm.SwipeScreenActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="50dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="110dp"
+            android:elevation="4dp"
+            android:background="@drawable/shadow_background">
+
+            <!-- Using example data, haven't connected to database -->
+            <ImageView
+                android:id="@+id/SwipeScreen_imageviewMainProfilePic"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="3dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                android:background="#FFFFFF"
+                android:src="@drawable/kurumi_school"/>
+
+            <!-- Using example data, haven't connected to database -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="330dp"
+                android:layout_marginEnd="2dp"
+                android:background="@drawable/shadow_background"
+                android:textStyle="bold"
+                android:text="Tokisaki Kurumi (age 17, 2km)"
+                android:textColor="#000000"
+                android:textSize="22sp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                />
+        </RelativeLayout>
+
+        <!-- The layout below is used to contain set of images
+                in object's gallery -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:layout_marginTop="395dp"
+            android:background="@drawable/shadow_background"
+            android:elevation="4dp">
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/SwipeScreen_buttonSettings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/labelButtonSettings"
+        android:layout_marginTop="520dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+</android.widget.RelativeLayout>
