@@ -15,8 +15,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <meta-data android:name="com.facebook.sdk.ApplicationId"
-            android:value="@string/facebook_app_id"/>
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
 
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -29,6 +30,7 @@
         <activity android:name=".FillIInfoActivity" />
         <activity android:name=".SwipeScreenActivity" />
         <activity android:name=".AccountSettingActivity" />
+        <activity android:name=".ChattingActivity"></activity>
     </application>
 
 </manifest>
