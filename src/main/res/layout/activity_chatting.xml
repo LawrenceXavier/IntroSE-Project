@@ -29,7 +29,6 @@
             android:layout_height="match_parent"
             android:layout_weight="0.2"
             android:background="@android:color/transparent"
-            android:contentDescription="Sending Button"
             android:src="@android:drawable/ic_menu_send" />
 
     </LinearLayout>
