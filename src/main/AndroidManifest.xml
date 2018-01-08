@@ -30,7 +30,14 @@
         <activity android:name=".FillIInfoActivity" />
         <activity android:name=".SwipeScreenActivity" />
         <activity android:name=".AccountSettingActivity" />
-        <activity android:name=".ChattingActivity"></activity>
+        <activity
+            android:name=".ChattingActivity"
+            android:parentActivityName=".SwipeScreenActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.lawrence.nmcnpm.SwipeScreenActivity"
+                />
+        </activity>
     </application>
 
 </manifest>
