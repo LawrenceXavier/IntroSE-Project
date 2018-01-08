@@ -54,6 +54,7 @@
             android:text="@string/labelGender" />
 
         <RadioGroup
+            android:id="@+id/FillInfo_RadGpGenderChosen"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -62,16 +63,19 @@
             >
 
             <RadioButton
+                android:id="@+id/FillInfo_RadButMale"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/labelGenderMale" />
 
             <RadioButton
+                android:id="@+id/FillInfo_RadButMale"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/labelGenderFemale" />
 
             <RadioButton
+                android:id="@+id/FillInfo_RadButMale"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/labelGenderOther" />
@@ -107,6 +111,7 @@
             android:text="@string/labelInterest"/>
 
         <RadioGroup
+            android:id="@+id/FillInfo_Interest"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -117,16 +122,19 @@
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/FillInfo_RadButMale_Int"
                 android:text="@string/labelGenderMale" />
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/FillInfo_RadButFemale_Int"
                 android:text="@string/labelGenderFemale" />
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:id="@+id/FillInfo_RadButOther_Int"
                 android:text="@string/labelGenderOther" />
         </RadioGroup>
 
