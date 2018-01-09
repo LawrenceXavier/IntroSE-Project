@@ -1,10 +1,10 @@
 package com.example.lawrence.nmcnpm;
 
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
@@ -42,7 +42,9 @@ public class ChattingActivity extends AppCompatActivity {
         TextView meLabel = (TextView) findViewById(R.id.meLbl);
         TextView companionLabel = (TextView) findViewById(R.id.friendLabel);
         RelativeLayout container = (RelativeLayout) findViewById(R.id.container);
-        companionLabel.setText("My Buddy");// Hard Coded
+        SharedPreferences info = getSharedPreferences("info", 0);
+        meLabel.setText(info.getString("name", "MySelf"));
+        companionLabel.setText("Tokisaki Kurumi");
 
         loadDummyHistory();
 

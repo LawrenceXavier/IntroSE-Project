@@ -16,46 +16,37 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button btLoginFb = findViewById(R.id.Main_btLoginFb);
-        btLoginFb.setVisibility(View.INVISIBLE);
+        btLoginFb.setVisibility(View.VISIBLE);
         btLoginFb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 boolean notLoggedIn = AccessToken.getCurrentAccessToken() == null;
                 if (notLoggedIn) {
                     Intent loginIntent = new Intent(MainActivity.this, LoginWithFacebookActivity.class);
-                    startActivity(loginIntent);
+                    startActivityForResult(loginIntent, 1);
+                } else {
+                    Intent swipingIntent = new Intent(MainActivity.this, SwipeScreenActivity.class);
+                    startActivity(swipingIntent);
                 }
-
-                /*
-                if (not <account exists>) {
-                    Intent fillInfoIntent = new Intent(...);    // go to FillIInfoActivity
-                    startActivity(fillInfoIntent);
-                }
-                 */
-
-                Intent swipingIntent = new Intent(MainActivity.this, SwipeScreenActivity.class);
-                startActivity(swipingIntent);
             }
         });
 
         Button btLoginPhone = findViewById(R.id.Main_btLoginPhone);
-        btLoginFb.setVisibility(View.INVISIBLE);
+        btLoginPhone.setVisibility(View.VISIBLE);
         btLoginPhone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // show a new activity for user to fill in the phone number
+                Intent loginIntent = new Intent(MainActivity.this, FillIInfoActivity.class);
+                startActivityForResult(loginIntent, 1);
             }
         });
+    }
 
-        /*
-        if (<already logged in to SOD>) {   // back-end part
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 1 && resultCode == RESULT_OK) {
             Intent swipingIntent = new Intent(MainActivity.this, SwipeScreenActivity.class);
             startActivity(swipingIntent);
         }
-        else {
-            btLoginFb.setVisibility(View.VISIBLE);
-            btLoginFb.setVisibility(View.VISIBLE);
-        }
-        */
     }
 }
